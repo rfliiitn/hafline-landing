@@ -548,7 +548,7 @@ function Contact() {
   };
 
   const handleWhatsApp = () => {
-    const waNumber = import.meta.env.VITE_WA_NUMBER || "6281299070821";
+    const waNumber = import.meta.env.VITE_WA_NUMBER || "081299070821";
     const message = encodeURIComponent(
       "Hello HAFLINE! I'm interested in your products."
     );
