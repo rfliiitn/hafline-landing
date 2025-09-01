@@ -547,16 +547,21 @@ function Contact() {
     }, 1000);
   };
 
-  const handleWhatsApp = () => {
-    const waNumber = import.meta.env.VITE_WA_NUMBER || "081299070821";
-    const message = encodeURIComponent(
-      "Hello HAFLINE! I'm interested in your products."
-    );
-    window.open(
-      `https://wa.me/${waNumber.replace("+", "")}?text=${message}`,
-      "_blank"
-    );
-  };
+const handleWhatsApp = () => {
+  let waNumber = import.meta.env.VITE_WA_NUMBER || "6281299070821";
+
+  // pastikan tidak ada plus di depan
+  waNumber = waNumber.replace(/^\+/, "");
+
+  const message = encodeURIComponent(
+    "Hello Rafli.. kamu ganteng banget sih :) ehehe"
+  );
+
+  window.open(
+    `https://wa.me/${waNumber}?text=${message}`,
+    "_blank"
+  );
+};
 
   return (
     <section id="contact" className="py-20 bg-gray-800">
